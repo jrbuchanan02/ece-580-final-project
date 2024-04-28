@@ -1,0 +1,6 @@
++======================+==================+================================+
+| Launch Clock         | Capture Clock    | Pin                            |
++======================+==================+================================+
+| tile_clock_vga_clock | vga_hd_vga_clock | graphics/hd/blue_out_reg[2]/D  |
+| tile_clock_vga_clock | vga_hd_vga_clock | graphics/hd/green_out_reg[3]/D |
++----------------------+------------------+--------------------------------+

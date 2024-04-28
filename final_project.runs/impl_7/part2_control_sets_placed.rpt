@@ -1,0 +1,97 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Thu Dec 21 10:12:46 2023
+| Host         : Joshuas-Laptop running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file part2_control_sets_placed.rpt
+| Design       : part2
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    19 |
+|    Minimum number of control sets                        |    19 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    63 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    19 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     3 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    10 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            3279 |          702 |
+| No           | No                    | Yes                    |            1932 |          412 |
+| No           | Yes                   | No                     |              12 |            4 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            1682 |          384 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------+------------------------------------+-----------------------------+------------------+----------------+--------------+
+|           Clock Signal           |            Enable Signal           |       Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------------+------------------------------------+-----------------------------+------------------+----------------+--------------+
+|  pixel_clock0                    |                                    |                             |                3 |              3 |         1.00 |
+|  pixel_clock01_out               |                                    |                             |                2 |              3 |         1.50 |
+|  v_sync_BUFG                     | snek/genblk1[0].cols[0][7]_i_1_n_0 | SW_IBUF[0]                  |                3 |              8 |         2.67 |
+|  v_sync_BUFG                     | snek/genblk1[0].rows[0][7]_i_1_n_0 | SW_IBUF[0]                  |                3 |              8 |         2.67 |
+|  v_sync_BUFG                     | snek/length0                       | SW_IBUF[0]                  |                3 |              8 |         2.67 |
+|  graphics/clocks/inst/tile_clock |                                    | snek/part_number[7]_i_1_n_0 |                4 |             12 |         3.00 |
+|  pixel_clock0                    | graphics/sd/v_count[11]_i_1_n_0    | SW_IBUF[0]                  |                4 |             12 |         3.00 |
+|  pixel_clock01_out               | graphics/hd/v_count[11]_i_1__0_n_0 | SW_IBUF[0]                  |                4 |             12 |         3.00 |
+|  display/clock                   |                                    | SW_IBUF[0]                  |                6 |             14 |         2.33 |
+|  apple_should_move_BUFG          | score/value[15]_i_1_n_0            | SW_IBUF[0]                  |                6 |             16 |         2.67 |
+|  graphics/clocks/inst/tile_clock |                                    | SW_IBUF[0]                  |                6 |             19 |         3.17 |
+|  graphics/clocks/inst/vga_hd     |                                    | SW_IBUF[0]                  |                7 |             20 |         2.86 |
+|  pixel_clock0                    |                                    | SW_IBUF[0]                  |                9 |             27 |         3.00 |
+|  pixel_clock01_out               |                                    | SW_IBUF[0]                  |                7 |             27 |         3.86 |
+|  v_sync_BUFG                     |                                    |                             |                6 |             32 |         5.33 |
+|  v_sync_BUFG                     | apple_should_move_BUFG             | SW_IBUF[0]                  |               11 |             34 |         3.09 |
+|  v_sync_BUFG                     | snek/p_2_out                       | SW_IBUF[0]                  |              350 |           1584 |         4.53 |
+|  v_sync_BUFG                     |                                    | SW_IBUF[0]                  |              377 |           1825 |         4.84 |
+|  graphics/clocks/inst/tile_clock |                                    |                             |              691 |           3241 |         4.69 |
++----------------------------------+------------------------------------+-----------------------------+------------------+----------------+--------------+
+
+

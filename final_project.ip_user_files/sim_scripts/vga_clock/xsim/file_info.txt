@@ -1,0 +1,3 @@
+vga_clock_clk_wiz.v,verilog,xil_defaultlib,../../../../final_project.gen/sources_1/ip/vga_clock/vga_clock_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+vga_clock.v,verilog,xil_defaultlib,../../../../final_project.gen/sources_1/ip/vga_clock/vga_clock.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+glbl.v,Verilog,xil_defaultlib,glbl.v

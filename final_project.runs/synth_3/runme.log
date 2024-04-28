@@ -1,0 +1,404 @@
+
+*** Running vivado
+    with args -log part2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source part2.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source part2.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/utils_1/imports/synth_3/part2.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/utils_1/imports/synth_3/part2.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top part2 -part xc7a35tcpg236-1 -directive PerformanceOptimized -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17432
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1233.301 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'part2' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/part2.v:30]
+INFO: [Synth 8-6157] synthesizing module 'vga' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/vga.v:106]
+INFO: [Synth 8-6157] synthesizing module 'vga_clock' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.runs/synth_3/.Xil/Vivado-26220-Joshuas-Laptop/realtime/vga_clock_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'vga_clock' (1#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.runs/synth_3/.Xil/Vivado-26220-Joshuas-Laptop/realtime/vga_clock_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'vga_sender' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/vga.v:24]
+WARNING: [Synth 8-7137] Register h_video_reg in module vga_sender has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/vga.v:58]
+WARNING: [Synth 8-7137] Register v_video_reg in module vga_sender has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/vga.v:58]
+WARNING: [Synth 8-7137] Register v_sync_reg in module vga_sender has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/vga.v:97]
+INFO: [Synth 8-6155] done synthesizing module 'vga_sender' (2#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/vga.v:24]
+INFO: [Synth 8-6157] synthesizing module 'vga_sender__parameterized0' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/vga.v:24]
+	Parameter hacross bound to: 1920 - type: integer 
+	Parameter hsynclo bound to: 2008 - type: integer 
+	Parameter hsynchi bound to: 2052 - type: integer 
+	Parameter hendcnt bound to: 2200 - type: integer 
+	Parameter hsyncpo bound to: 1 - type: integer 
+	Parameter vacross bound to: 1080 - type: integer 
+	Parameter vsynclo bound to: 1084 - type: integer 
+	Parameter vsynchi bound to: 1089 - type: integer 
+	Parameter vendcnt bound to: 1125 - type: integer 
+	Parameter vsyncpo bound to: 1 - type: integer 
+WARNING: [Synth 8-7137] Register h_video_reg in module vga_sender__parameterized0 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/vga.v:58]
+WARNING: [Synth 8-7137] Register v_video_reg in module vga_sender__parameterized0 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/vga.v:58]
+WARNING: [Synth 8-7137] Register v_sync_reg in module vga_sender__parameterized0 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/vga.v:97]
+INFO: [Synth 8-6155] done synthesizing module 'vga_sender__parameterized0' (2#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/vga.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'vga' (3#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/vga.v:106]
+INFO: [Synth 8-6157] synthesizing module 'apple' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/apple.v:23]
+INFO: [Synth 8-6157] synthesizing module 'bussync' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/bussync.v:23]
+	Parameter high_bit bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bussync' (4#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/bussync.v:23]
+INFO: [Synth 8-6157] synthesizing module 'lfsr' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/lfsr.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr' (5#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/lfsr.v:23]
+WARNING: [Synth 8-689] width (16) of port connection 'random' does not match port width (19) of module 'lfsr' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/apple.v:55]
+INFO: [Synth 8-6157] synthesizing module 'snake_part' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/snake_part.v:26]
+INFO: [Synth 8-6157] synthesizing module 'bussync__parameterized0' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/bussync.v:23]
+	Parameter high_bit bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bussync__parameterized0' (5#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/bussync.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'snake_part' (6#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/snake_part.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'apple' (7#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/apple.v:23]
+INFO: [Synth 8-6157] synthesizing module 'snake' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/snake.v:23]
+	Parameter max_length bound to: 99 - type: integer 
+	Parameter max_length_bits bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'snake' (8#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/snake.v:23]
+INFO: [Synth 8-6157] synthesizing module 'score_display' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/score_display.v:23]
+INFO: [Synth 8-6157] synthesizing module 'lcd' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/lcd.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'lcd' (9#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/lcd.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'score_display' (10#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/score_display.v:23]
+INFO: [Synth 8-6157] synthesizing module 'bcd_counter' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/bcd_counter.v:23]
+	Parameter reset_value bound to: 16'b0000000000000100 
+INFO: [Synth 8-6155] done synthesizing module 'bcd_counter' (11#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/bcd_counter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'direction_decode' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/direction_decode.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'direction_decode' (12#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/direction_decode.v:30]
+INFO: [Synth 8-6157] synthesizing module 'color_logic' [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/color_logic.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'color_logic' (13#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/color_logic.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'part2' (14#1) [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/sources_1/new/part2.v:30]
+WARNING: [Synth 8-3917] design part2 has port LED[15] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[14] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[13] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[12] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[11] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[10] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[9] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[8] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[7] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[6] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[5] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[4] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[3] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[1] driven by constant 0
+WARNING: [Synth 8-7129] Port tens_score[3] in module color_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tens_score[2] in module color_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tens_score[1] in module color_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tens_score[0] in module color_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ones_score[3] in module color_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ones_score[2] in module color_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ones_score[1] in module color_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ones_score[0] in module color_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port buttons[4] in module direction_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port h_count[3] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port h_count[2] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port h_count[1] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port h_count[0] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port v_count[3] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port v_count[2] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port v_count[1] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port v_count[0] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[14] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[13] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[12] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[11] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[10] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[9] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[8] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[7] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[6] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[5] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[4] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[3] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[2] in module part2 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1233.301 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1233.301 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1233.301 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 1233.301 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.gen/sources_1/ip/vga_clock/vga_clock/vga_clock_in_context.xdc] for cell 'graphics/clocks'
+Finished Parsing XDC File [c:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.gen/sources_1/ip/vga_clock/vga_clock/vga_clock_in_context.xdc] for cell 'graphics/clocks'
+Parsing XDC File [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/constrs_1/imports/uart_tx_files/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/constrs_1/imports/uart_tx_files/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.srcs/constrs_1/imports/uart_tx_files/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/part2_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/part2_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1288.219 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1288.219 ; gain = 0.000
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.gen/sources_1/ip/vga_clock/vga_clock/vga_clock_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.gen/sources_1/ip/vga_clock/vga_clock/vga_clock_in_context.xdc, line 6).
+Applied set_property KEEP_HIERARCHY = SOFT for graphics/clocks. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'pstate_reg' in module 'snake'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                              001 |                               11
+                 iSTATE1 |                              010 |                               01
+                  iSTATE |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'pstate_reg' using encoding 'one-hot' in module 'snake'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 3     
++---XORs : 
+	   2 Input     20 Bit         XORs := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	               12 Bit    Registers := 4     
+	                8 Bit    Registers := 810   
+	                4 Bit    Registers := 11    
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 223   
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 6     
+	   4 Input    8 Bit        Muxes := 2     
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 5     
+	   4 Input    4 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 7     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 10    
+	   4 Input    1 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design part2 has port LED[15] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[14] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[13] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[12] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[11] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[10] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[9] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[8] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[7] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[6] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[5] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[4] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[3] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design part2 has port LED[1] driven by constant 0
+WARNING: [Synth 8-7129] Port h_count[3] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port h_count[2] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port h_count[1] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port h_count[0] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port v_count[3] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port v_count[2] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port v_count[1] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port v_count[0] in module snake_part is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[14] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[13] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[12] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[11] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[10] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[9] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[8] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[7] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[6] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[5] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[4] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[3] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[2] in module part2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[4] in module part2 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |vga_clock     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |vga_clock |     1|
+|2     |BUFG      |     4|
+|3     |CARRY4    |    48|
+|4     |LUT1      |    22|
+|5     |LUT2      |    98|
+|6     |LUT3      |    76|
+|7     |LUT4      |   105|
+|8     |LUT5      |    64|
+|9     |LUT6      |  1229|
+|10    |MUXF7     |   196|
+|11    |MUXF8     |    68|
+|12    |FDCE      |  3075|
+|13    |FDPE      |   538|
+|14    |FDRE      |  3291|
+|15    |IBUF      |     7|
+|16    |OBUF      |    42|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 1288.219 ; gain = 54.918
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 38 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:50 . Memory (MB): peak = 1288.219 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 1288.219 ; gain = 54.918
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 1288.219 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 312 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1295.965 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 34431c10
+INFO: [Common 17-83] Releasing license: Synthesis
+53 Infos, 92 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:59 . Memory (MB): peak = 1295.965 ; gain = 62.664
+INFO: [Common 17-1381] The checkpoint 'C:/Users/joshu/OneDrive/Documents/College/ECE_580/final_project/final_project.runs/synth_3/part2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file part2_utilization_synth.rpt -pb part2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 21 09:04:36 2023...
